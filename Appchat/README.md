@@ -21,25 +21,32 @@ $ ./server
 
 ## Commands
 ### Administrator Only Commands
-$ \add <user_name>
+$ **\add \<user_name>**
+
 The add command creates a new shell process for a user with the specified user name.
 
-$ \kick <user_name>
+$ **\kick \<user_name>**
+
 The kick command kicks a user 
 
 ### User Only Commands
-$ \p2p <user_name> <message>
+$ **\p2p \<user_name> \<message>**
+
 The p2p (peer-to-peer) command acts as a private message to the user with the specified username.
 
-$ \seg
+$ **\seg**
+
 The seg command causes a segmentation fault in the user's shell process. The server process is responsible for gracefully handling the segmentation fault.
 
 ### Administrator and User Commands
-$ <message>
+$ **\<message>**
+
 Sends the message to all users.
 
-$ \list
+$ **\list**
+
 The list command lists the currently "online" users.
 
-$ \exit
+$ **\exit**
+
 If called by a user, the user's process is terminated. If called by the administrator, all user's processes are terminated, then the administrator shell process is terminated. Finally the server process terminates.
